@@ -1,0 +1,119 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  cursor: none;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  color: white;
+  background-color: #212121;
+}
+
+h1 {
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+  color: teal;
+}
+p {
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.blog {
+  padding: 2rem;
+}
+
+.intro {
+  position: fixed;
+  z-index: 1000;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: green;
+  transition: 1s;
+}
+
+.logo-header {
+  position: absolute;
+  top: 40%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: beige;
+}
+
+.intro-logo {
+  position: relative;
+  display: inline-block;
+  bottom: -25px;
+  opacity: 0;
+}
+
+.intro-logo.active {
+  bottom: 0;
+  opacity: 1;
+  transition: 0.5s ease-in-out;
+}
+
+.intro-logo.fade {
+  bottom: 150px;
+  opacity: 0;
+  transition: 0.5s ease-in-out;
+}
+
+.inner-cursor {
+  position: fixed;
+  left: 10px;
+  z-index: 999;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: white;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  transition: width 0.5s, height 0.5s;
+}
+
+.inner-cursor.grow {
+  width: 25px;
+  height: 25px;
+  transition: width 0.5s, height 0.5s;
+}
+
+.outer-cursor {
+  width: 25px;
+  height: 25px;
+  position: fixed;
+  left: 10px;
+  z-index: 999;
+  border: 1px solid white;
+  border-radius: 50%;
+  mix-blend-mode: difference;
+  transform: translate(-50%, -50%);
+  transition: 0.1s;
+}
+
+a {
+  color: inherit;
+  font-size: 16px;
+  text-decoration: none;
+  background-color: teal;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 1rem 2rem;
+  border-radius: 100px;
+  display: inline-block;
+  font-family: 500;
+  letter-spacing: 2px;
+  transition: 300;
+}
+
+a:hover {
+  background-color: white;
+  color: #212121;
+}
